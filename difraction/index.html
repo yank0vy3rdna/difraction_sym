@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://studyphysics.ifmo.ru/pluginfile.php/17494/mod_resource/content/5/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--[if !IE]><script>alert("Установите более современный браузер");window.location.href = "https://www.google.ru/chrome/browser/desktop/";</script><![endif]-->
+    <link rel="stylesheet" href="./sources/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./sources/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="./sources/style.css">
+    <script src="./sources/jquery.min.js"></script>
+    <script src="./sources/Chart.bundle.min.js"></script><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+
+    <title>Дифракция</title>
+</head>
+<body>
+
+<header>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Симуляция дифракционной картины(Выполнили Крюков, Бабалин P3114)</h5>
+    </div>
+</header>
+<main>
+    <div class="canvasWrap">
+        <canvas class="gradient" id="grad" width="992" height="500"></canvas>
+    </div>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label for="N" id="labelN">Количество щелей: 3</label>
+                <input type="range" min="1" max="50" class="form-control-range disabled" value="1" id="N">
+            </div>
+            <div class="form-group">
+                <label for="lambda" id="labelLambda">длина волны: 550нм</label>
+                <input type="range" min="400" max="700" class="form-control-range" id="lambda">
+            </div>
+            <div class="form-group">
+                <label for="a" id="labelA">Ширина щели: 100мкм</label>
+                <input type="range" min="1" max="199" class="form-control-range" id="a">
+            </div>
+            <div class="form-group">
+                <label for="b" id="labelB">Расстояние между краями соседних щелей: 100мкм</label>
+                <input type="range" min="1" max="199" class="form-control-range" id="b">
+            </div>
+            <div class="form-group" style="display: none">
+                <label for="I" id="labelI">Интенсивность в центре: 50</label>
+                <input type="range" min="0" max="100" class="form-control-range" id="I">
+            </div>
+            <div class="form-group">
+                <label for="L" id="labelL">Расстояние от решетки до экрана: 2м</label>
+                <input type="range" min="10" max="50" value="20" class="form-control-range" id="L">
+            </div>
+	  
+        </form>
+    </div>
+</main>
+
+<script src="./sources/const.js"></script>
+<script src="./sources/Chart.js"></script><a style="display: none;"></a>
+<noscript>
+    <div>
+        Извините, для работы приложения нужен включённый Javascript
+    </div>
+</noscript>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted"><a href="http://yank0vy3rdna.ru">yank0vy3rdna</a> and IuryBabalin</span>
+    </div>
+</footer>
+<script src="./sources/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="./sources/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="./sources/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body></html>
