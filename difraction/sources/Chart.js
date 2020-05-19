@@ -1,12 +1,8 @@
-let myChart;
 let delta = -3;
 let isPortableDevice = true;
 let xCoord = [];
 let Intens = [];
 
-function diagram () {
-    update();
-}
 
 
 
@@ -159,57 +155,5 @@ L.onchange = function () {
 };
 
 window.onload = function () {
-    diagram();
+    update();
 };
-
-
-function generateCSV(Intens, xCoord) {
-    let rows = [['x, mm', 'I']]
-    let filename = "diffraction_" + Date.now();
-    let dataString = ""
-    intens.forEach(function (row, i) {
-        rows.push([(xCoord[i]).toString(), Intens[i]]);
-       //console.log(i / 100 * scale * 4, row / Math.max(...intens));
-    })
-
-
-    var csvContent = "" //= "data:text/csv;charset=utf-8,";
-
-    rows.forEach(function (infoArray, index) {
-        dataString = ""
-       
-        if (index != 0) {
-            dataString = parseFloat(infoArray[0]).toFixed(4).toString().replace('.', ',') + ";" +
-                parseFloat(infoArray[1]).toFixed(9).toString().replace('.', ',')
-        } else {
-            dataString = infoArray[0] + ";" + infoArray[1]
-        }
-      
-        csvContent += dataString + "\n";
-    });
-    let blob = new Blob([csvContent], {type: "text/csv;charset=cp-1251"})
-    saveBlob(blob, filename + '.csv')
-    
-
-}
-
-var saveBlob = (function () {
-    var a = document.createElement("a");
-    document.body.appendChild(a);
-    a.style = "display: none";
-    return function (blob, fileName) {
-        var url = window.URL.createObjectURL(blob);
-        a.href = url;
-        a.download = fileName;
-        a.click();
-        window.URL.revokeObjectURL(url);
-    };
-}());
-
-$("#generateCSV").on('click', function () {
-        if (!$(this).hasClass('disabled')) {
-            generateCSV(Intens, xCoord)
-        }
-
-    });
-
